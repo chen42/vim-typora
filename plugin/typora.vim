@@ -1,8 +1,8 @@
-if has('mac')
+if has ('unix')
 
   function! typora#launch()
       " Launch Typora
-      call system("open -a Typora \"" . expand("%") . "\"")
+      call system("typora \"" . expand("%") . "\" &")
       setlocal autoread
   endfunction
 
